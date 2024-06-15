@@ -581,8 +581,8 @@ GameObject:
   - component: {fileID: 1750031650}
   - component: {fileID: 1750031649}
   - component: {fileID: 1750031648}
-  - component: {fileID: 1750031652}
   - component: {fileID: 1750031651}
+  - component: {fileID: 1750031652}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -708,6 +708,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e22b5d6bdfbc6d1428f7eb270773c5ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AnimationData: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

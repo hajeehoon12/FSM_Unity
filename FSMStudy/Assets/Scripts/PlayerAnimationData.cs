@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
-public class PlayerAnimationData : MonoBehaviour
+[Serializable]
+public class PlayerAnimationData
 {
-
     [SerializeField] private string groundParameterName = "@Ground";
     [SerializeField] private string idleParameterName = "Idle";
     [SerializeField] private string walkParameterName = "Walk";
@@ -28,7 +29,7 @@ public class PlayerAnimationData : MonoBehaviour
     public int FallParameterHash { get; private set; }
     public int AttackParameterHash { get; private set; }
     public int ComboAttackParameterHash { get; private set; }
- 
+
 
     public void Initalize()
     {
@@ -40,12 +41,9 @@ public class PlayerAnimationData : MonoBehaviour
         AirParameterHash = Animator.StringToHash(airParameterName);
         JumpParameterHash = Animator.StringToHash(jumpParameterName);
         FallParameterHash = Animator.StringToHash(fallParameterName);
-        
+
         AttackParameterHash = Animator.StringToHash(attackParametername);
         ComboAttackParameterHash = Animator.StringToHash(comboAttackParametername);
 
     }
-
-
-   
 }

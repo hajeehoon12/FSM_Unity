@@ -1,14 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
 
-    [field : Header("Animations")]
-    [field : SerializeField] public PlayerAnimationData AnimationData { get; private set; }
+    [field: Header("Animations")]
+    public PlayerAnimationData AnimationData;
 
-    public Animator animator { get; private set; }
+
+    public Animator Animator { get; private set; }
     public PlayerController Input { get; private set; }
     public CharacterController Controller { get; private set; }
 
@@ -16,7 +15,7 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         AnimationData.Initalize();
-        animator = GetComponent<Animator>();
+        Animator = GetComponent<Animator>();
         Input = GetComponent<PlayerController>();
         Controller = GetComponent<CharacterController>();
     }
@@ -29,8 +28,4 @@ public class Player : MonoBehaviour
     }
 
 
-    void Update()
-    {
-        
-    }
 }
