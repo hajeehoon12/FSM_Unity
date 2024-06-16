@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     public PlayerInputs.PlayerActions playerActions { get; private set; }
 
     
-    void Start()
+    private void Awake()
     {
         playerInputs = new PlayerInputs();
         playerActions = playerInputs.Player;
